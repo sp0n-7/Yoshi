@@ -6,6 +6,8 @@
 //  Copyright © 2015 Prolific Interactive. All rights reserved.
 //
 
+import UIKit
+
 /// The Debug Menu interface.
 public final class Yoshi {
 

@@ -6,6 +6,8 @@
 //  Copyright © 2015 Prolific Interactive. All rights reserved.
 //
 
+import UIKit
+
 /// The date picker view controller.
 class DebugDatePickerViewController: UIViewController {
 

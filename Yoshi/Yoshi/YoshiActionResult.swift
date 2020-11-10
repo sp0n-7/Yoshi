@@ -6,6 +6,8 @@
 //  Copyright © 2016 Prolific Interactive. All rights reserved.
 //
 
+import UIKit
+
 ///  The result types for a debug menu action.
 ///
 /// - handled: Indicates that the action was handled and nothing else is required.

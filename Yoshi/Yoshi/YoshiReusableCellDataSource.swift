@@ -6,6 +6,8 @@
 //  Copyright © 2017 Prolific Interactive. All rights reserved.
 //
 
+import UIKit
+
 /// Object helps YoshiGenericMenu define cell's UI when presented in Yoshi.
 public protocol YoshiReusableCellDataSource {
 

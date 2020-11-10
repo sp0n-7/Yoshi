@@ -6,6 +6,9 @@
 //  Copyright © 2017 Prolific Interactive. All rights reserved.
 //
 
+import Foundation
+import UIKit
+
 /// Cell data source defining the layout for YoshiDateSelectorMenu's cell
 struct YoshiDateSelectorMenuCellDataSource: YoshiReusableCellDataSource {
 
