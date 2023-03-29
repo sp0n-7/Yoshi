@@ -34,7 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         menu.append(environmentMenu())
         menu.append(dateSelectorMenu())
-        menu.append(instabugMenu())
         menu.append(userAccountIdentifier())
         menu.append(menuWithCustomUI())
 
@@ -60,17 +59,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                     NotificationCenter.default.post(name:
                                         NSNotification.Name(rawValue: Notifications.EnvironmentDateUpdatedNotification),
                                                                     object: dateSelected)
-        })
-    }
-
-    private func instabugMenu() -> YoshiMenu {
-        Instabug.start(withToken: "cf779d2e19c0affaad8567a7598e330d", invocationEvent: .none)
-        Instabug.setDefaultInvocationMode(.bugReporter)
-
-        return YoshiActionMenu(title: "Start Instabug",
-                               subtitle: nil,
-                               completion: {
-            Instabug.invoke()
         })
     }
 

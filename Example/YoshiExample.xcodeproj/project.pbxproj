@@ -27,7 +27,6 @@
 		276BCED51C29F060002138C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		276BCED81C29F060002138C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		276BCEDA1C29F060002138C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27C7F7EB1CF51D4D0069687F /* YoshiExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YoshiExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		32CF65FE1F7B0515001A712A /* YoshiBaseEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoshiBaseEnvironment.swift; sourceTree = "<group>"; };
 		38AED69D51CB2462EC94055C /* Pods_YoshiExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoshiExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B69EFE97A45841AA3569F78 /* Pods-YoshiExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoshiExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-YoshiExample/Pods-YoshiExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,7 +78,6 @@
 				276BCED51C29F060002138C7 /* Assets.xcassets */,
 				276BCED71C29F060002138C7 /* LaunchScreen.storyboard */,
 				276BCEDA1C29F060002138C7 /* Info.plist */,
-				27C7F7EB1CF51D4D0069687F /* YoshiExample-Bridging-Header.h */,
 			);
 			path = YoshiExample;
 			sourceTree = "<group>";
@@ -140,7 +138,6 @@
 				276BCEC81C29F060002138C7 /* Frameworks */,
 				276BCEC91C29F060002138C7 /* Resources */,
 				9807FA47239685B35BD1B1CC /* [CP] Embed Pods Frameworks */,
-				2FE9A2C899648AB92ACEAA90 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,24 +199,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2FE9A2C899648AB92ACEAA90 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YoshiExample/Pods-YoshiExample-resources.sh",
-				"${PODS_ROOT}/Instabug/Instabug.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Instabug.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YoshiExample/Pods-YoshiExample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9807FA47239685B35BD1B1CC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -410,7 +389,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "YoshiExample/YoshiExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -434,7 +412,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "YoshiExample/YoshiExample-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

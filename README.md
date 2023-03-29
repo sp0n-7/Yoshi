@@ -74,7 +74,7 @@ To display Yoshi, simply set up the menu and present it.
 ```swift
 
 // Setup the custom menus
-Yoshi.setupDebugMenu([environmentMenu, instabugMenu, dateSelectionMenu])
+Yoshi.setupDebugMenu([environmentMenu, dateSelectionMenu])
 
 // Invoke Yoshi
 Yoshi.show()
@@ -88,13 +88,6 @@ Yoshi can be set up to display any sort of menu as long as the menu object confo
 
 Action Menu is the simplest Yoshi menu able to execute custom events when tapped.
 
-For example, we can invoke [Instabug](https://instabug.com) when a custom menu is selected.
-
-```swift
-let instabugMenu = YoshiActionMenu(title: "Start Instabug",
-                                   subtitle: nil,
-                                   completion: { Instabug.invoke() })
-```
 
 ### Single Selection Menu
 
@@ -171,7 +164,6 @@ final class Submenu: YoshiSubmenu {
 let integrationsSubmenu = Submenu(title: "Third Party Integrations",
     subtitle: nil,
     options: [
-        instabugMenu,
         crashlyticsMenu
     ]
 )
