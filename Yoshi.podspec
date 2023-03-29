@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.author           = { "Michael Campbell" => "Michael@prolificinteractive.com" , "Luna An" => "luna@prolificinteractive.com"}
   s.source           = { :git => "https://github.com/prolificinteractive/Yoshi.git", :tag => s.version.to_s }
 
-  s.platform     = :ios, '8.0'
+  s.platform     = :ios, '11.0'
   s.requires_arc = true
 
   # Default subspec that contains all shared code files for the library

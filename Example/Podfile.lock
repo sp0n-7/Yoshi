@@ -9,7 +9,7 @@ DEPENDENCIES:
   - Yoshi/QAKit (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Instabug
 
 EXTERNAL SOURCES:
@@ -17,9 +17,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Instabug: 6fa40a5e2a4620f0589dfc8e4e01b1018c8c42b1
-  Yoshi: f681e9474a3d0aa8ec7ec935c579f52c2d00a360
+  Instabug: edbb8aab8031c648b240cdb88e86afa4338bfd76
+  Yoshi: a1669b5e9861e78dede97b85a3df118847a60b6a
 
 PODFILE CHECKSUM: 6937f5f3704e17fb013434d20f6bd261b2e48f51
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.12.0

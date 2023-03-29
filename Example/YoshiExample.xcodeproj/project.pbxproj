@@ -173,6 +173,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -207,7 +208,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-YoshiExample/Pods-YoshiExample-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-YoshiExample/Pods-YoshiExample-resources.sh",
 				"${PODS_ROOT}/Instabug/Instabug.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -216,7 +217,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YoshiExample/Pods-YoshiExample-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YoshiExample/Pods-YoshiExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9807FA47239685B35BD1B1CC /* [CP] Embed Pods Frameworks */ = {
@@ -225,7 +226,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-YoshiExample/Pods-YoshiExample-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-YoshiExample/Pods-YoshiExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Yoshi/Yoshi.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -234,7 +235,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YoshiExample/Pods-YoshiExample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YoshiExample/Pods-YoshiExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A406AEF3198A3BAC81FB073C /* [CP] Check Pods Manifest.lock */ = {
@@ -336,7 +337,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
@@ -384,7 +385,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -403,7 +404,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = YoshiExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prolificinteractive.YoshiExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -427,7 +428,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = YoshiExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prolificinteractive.YoshiExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
