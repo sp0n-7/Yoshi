@@ -144,7 +144,10 @@ final class DebugViewController: UIViewController {
         navigationItem.leftBarButtonItem = closeButton
         navigationItem.title = AppBundleUtility.appDisplayName()
 
-        navigationController?.navigationBar.tintColor = .green
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .black
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        navigationController?.navigationBar.standardAppearance = appearance
     }
 
     private func setupDateFormatter() {
