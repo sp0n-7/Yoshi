@@ -143,6 +143,8 @@ final class DebugViewController: UIViewController {
                                           action: #selector(DebugViewController.close(_:)))
         navigationItem.leftBarButtonItem = closeButton
         navigationItem.title = AppBundleUtility.appDisplayName()
+
+        navigationController?.navigationBar.tintColor = .green
     }
 
     private func setupDateFormatter() {
