@@ -89,30 +89,20 @@ final class DebugViewController: UIViewController {
     }
 
     private func tableViewHeader() -> UIView {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 160))
-        let imageView = UIImageView(image: AppBundleUtility.icon())
-        view.addSubview(imageView)
-
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        let centerXConstraint = NSLayoutConstraint(item: imageView, attribute: .centerX,
-            relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0)
-        let topConstraint = NSLayoutConstraint(item: imageView, attribute: .top, relatedBy: .equal,
-            toItem: view, attribute: .top, multiplier: 1.0, constant: 38.0)
-
-        view.addConstraints([centerXConstraint, topConstraint])
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 44))
 
         let versionLabel = UILabel()
         versionLabel.text = AppBundleUtility.appVersionText()
-        versionLabel.textColor = Color(105, 105, 105).toUIColor()
-        versionLabel.font = UIFont.systemFont(ofSize: 12)
+        versionLabel.textColor = Color(160, 160, 160).toUIColor()
+        versionLabel.font = UIFont.monospacedDigitSystemFont(ofSize: 18, weight: .semibold)
         versionLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(versionLabel)
 
         let labelCenterXConstraint = NSLayoutConstraint(item: versionLabel, attribute: .centerX,
             relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0)
-        let labelTopConstraint = NSLayoutConstraint(item: versionLabel, attribute: .top, relatedBy: .equal,
-            toItem: imageView, attribute: .bottom, multiplier: 1.0, constant: 8.0)
-        view.addConstraints([labelCenterXConstraint, labelTopConstraint])
+        let labelCenterYConstraint = NSLayoutConstraint(item: versionLabel, attribute: .centerY,
+            relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1.0, constant: 0.0)
+        view.addConstraints([labelCenterXConstraint, labelCenterYConstraint])
 
         let separatorLine = UIView()
         separatorLine.translatesAutoresizingMaskIntoConstraints = false
