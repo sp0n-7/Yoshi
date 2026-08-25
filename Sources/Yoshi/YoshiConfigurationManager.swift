@@ -71,6 +71,13 @@ final class YoshiConfigurationManager: NSObject, UIAdaptivePresentationControlle
         }
 
         let window = UIWindow(frame: UIScreen.main.bounds)
+        // Under the UIScene lifecycle a window without a windowScene is never
+        // rendered, so attach the foreground scene when one exists.
+        if let windowScene = UIApplication.shared.connectedScenes
+            .compactMap({ $0 as? UIWindowScene })
+            .first(where: { $0.activationState == .foregroundActive }) {
+            window.windowScene = windowScene
+        }
         window.windowLevel = .normal
 
         // Use a dummy view controller with clear background.
