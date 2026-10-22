@@ -17,6 +17,7 @@ final class YoshiConfigurationManager: NSObject, UIAdaptivePresentationControlle
     private var yoshiMenuItems = [YoshiGenericMenu]()
     private var invocations: [YoshiInvocation]?
     private var presentingWindow: UIWindow?
+    private var sceneActivationObserver: NSObjectProtocol?
     private weak var debugViewController: DebugViewController?
 
     /**
@@ -70,14 +71,18 @@ final class YoshiConfigurationManager: NSObject, UIAdaptivePresentationControlle
             return
         }
 
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        // Under the UIScene lifecycle a window without a windowScene is never
-        // rendered, so attach the foreground scene when one exists.
-        if let windowScene = UIApplication.shared.connectedScenes
+        // A window without a windowScene is never rendered, and keeping it would
+        // block every later show(). Before a scene is active (a debug link during
+        // cold launch), wait for activation instead.
+        guard let windowScene = UIApplication.shared.connectedScenes
             .compactMap({ $0 as? UIWindowScene })
-            .first(where: { $0.activationState == .foregroundActive }) {
-            window.windowScene = windowScene
+            .first(where: { $0.activationState == .foregroundActive }) else {
+            showOnNextSceneActivation()
+            return
         }
+
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.windowScene = windowScene
         window.windowLevel = .normal
 
         // Use a dummy view controller with clear background.
@@ -95,6 +100,24 @@ final class YoshiConfigurationManager: NSObject, UIAdaptivePresentationControlle
         DispatchQueue.main.asyncAfter(deadline:
                 DispatchTime.now() + Double(Int64(0 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)) {
             self.presentDebugViewController()
+        }
+    }
+
+    private func showOnNextSceneActivation() {
+        guard sceneActivationObserver == nil else {
+            return
+        }
+        sceneActivationObserver = NotificationCenter.default.addObserver(
+            forName: UIScene.didActivateNotification,
+            object: nil,
+            queue: .main
+        ) { [weak self] _ in
+            guard let self = self else { return }
+            if let observer = self.sceneActivationObserver {
+                NotificationCenter.default.removeObserver(observer)
+            }
+            self.sceneActivationObserver = nil
+            self.show()
         }
     }
 
